@@ -1,0 +1,15 @@
+C:\Users\Diana Torrontegui\Desktop\C#\perimetros_areas\perimetros_areas\bin\Debug\net6.0\perimetros_areas.exe
+C:\Users\Diana Torrontegui\Desktop\C#\perimetros_areas\perimetros_areas\bin\Debug\net6.0\perimetros_areas.deps.json
+C:\Users\Diana Torrontegui\Desktop\C#\perimetros_areas\perimetros_areas\bin\Debug\net6.0\perimetros_areas.runtimeconfig.json
+C:\Users\Diana Torrontegui\Desktop\C#\perimetros_areas\perimetros_areas\bin\Debug\net6.0\perimetros_areas.dll
+C:\Users\Diana Torrontegui\Desktop\C#\perimetros_areas\perimetros_areas\bin\Debug\net6.0\perimetros_areas.pdb
+C:\Users\Diana Torrontegui\Desktop\C#\perimetros_areas\perimetros_areas\obj\Debug\net6.0\perimetros_areas.csproj.AssemblyReference.cache
+C:\Users\Diana Torrontegui\Desktop\C#\perimetros_areas\perimetros_areas\obj\Debug\net6.0\perimetros_areas.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Diana Torrontegui\Desktop\C#\perimetros_areas\perimetros_areas\obj\Debug\net6.0\perimetros_areas.AssemblyInfoInputs.cache
+C:\Users\Diana Torrontegui\Desktop\C#\perimetros_areas\perimetros_areas\obj\Debug\net6.0\perimetros_areas.AssemblyInfo.cs
+C:\Users\Diana Torrontegui\Desktop\C#\perimetros_areas\perimetros_areas\obj\Debug\net6.0\perimetros_areas.csproj.CoreCompileInputs.cache
+C:\Users\Diana Torrontegui\Desktop\C#\perimetros_areas\perimetros_areas\obj\Debug\net6.0\perimetros_areas.dll
+C:\Users\Diana Torrontegui\Desktop\C#\perimetros_areas\perimetros_areas\obj\Debug\net6.0\refint\perimetros_areas.dll
+C:\Users\Diana Torrontegui\Desktop\C#\perimetros_areas\perimetros_areas\obj\Debug\net6.0\perimetros_areas.pdb
+C:\Users\Diana Torrontegui\Desktop\C#\perimetros_areas\perimetros_areas\obj\Debug\net6.0\perimetros_areas.genruntimeconfig.cache
+C:\Users\Diana Torrontegui\Desktop\C#\perimetros_areas\perimetros_areas\obj\Debug\net6.0\ref\perimetros_areas.dll
