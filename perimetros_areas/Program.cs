@@ -7,35 +7,50 @@ using System;
 
 namespace perimetros_areas
 {
-
+    
     class Pogram
+
     {
+      
         static void Main(string[] args)
 
         {
-            string _AnswerToContinue = "yes";
+            int _answerToContinue = 1;
+          
+
 
             //Start the try catch block to identiry all exceptions could be generated in the program
             try
             {
-
-                //Declare the local variables
-               
-                string figure_name = "";
-
+           
                 //Cycle while do to maintain fluently the program
-                while (_AnswerToContinue != "no")
+                while (_answerToContinue == 1)
+
+
                 {
-                    Console.WriteLine("****Menu****");
+
+                    BeginingPage.StartUserPage();
+                    Console.WriteLine("Would you like to continue?");
+                    _answerToContinue = int.Parse(Console.ReadLine());
+                    #region AttendsToPrintMessages
+                    /*Console.WriteLine("1. To Add & Evaluate a shape , 2. To See your Shape List");
+                    int UserInput = int.Parse(Console.ReadLine());
+                    MainMenu attend = new MainMenu();
+                    attend.UserMenu(UserInput);*/
+                    #endregion
+                    #region ListWroking
+                    /*Console.WriteLine("****Menu****");
                     Console.WriteLine("Write the figure you want to evalaute:");
                     Console.WriteLine($"Triangle{Environment.NewLine} Square{Environment.NewLine} Rectangle{Environment.NewLine} Circle{Environment.NewLine} *******");
-                    figure_name = Console.ReadLine();
+                   String figure_name = Console.ReadLine();
 
                     //Class and method used to obtain the information of the shapes
                     FigureProcess answer = new FigureProcess();
+                    Figure figura = answer.CasesFigure(figure_name);
                     //answer.CasesFigure(figure_name);
-                    List<Figure> Latest = answer.GetList(answer.CasesFigure(figure_name));
-                    answer.PrintList(Latest);
+                    List<Figure> Lista = FigureProcess.GetList(figura);
+                    FigureProcess.PrintList(Lista);*/
+                    #endregion
                     #region Attend
                     //ONE ATTEND TO OBTAIN ALL FIGURES, IT DOES NOT WORK...
                     /*List<Figure> figuras = new List<Figure>();
@@ -47,13 +62,10 @@ namespace perimetros_areas
                     }*/
                     #endregion
 
-
-                    Console.WriteLine("Would you like to continue?");
-                    _AnswerToContinue = Console.ReadLine();
-
                 }
 
                 Console.WriteLine("Bye Bye to here!");
+               
 
             }
             //Catch to show the specific exception to the user

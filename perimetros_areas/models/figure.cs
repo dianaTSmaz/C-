@@ -11,29 +11,31 @@ namespace perimetros_areas.models
     //Parent class
     public abstract class Figure
     {
-        //Constructors
-        public decimal Side { get; set; }
-        public decimal Height { get; set; }
+      
+        //Attributes
+        public decimal  Side { get; set; }
+        public decimal  Height { get; set; }
 
-        protected String _Name { get; set; }
+        protected String  _Name { get; set; }
 
-        public decimal Radio { get; set; }
+        public decimal  Radio { get; set; }
+
+        public static List<Figure> ShapeList = new List<Figure>();
 
         //External constructor
-        public decimal _Perimeter { get; set; }
+        public decimal  _Perimeter { get; set; }
 
-        public decimal _Area { get; set; }
+        public decimal  _Area { get; set; }
+
+       
 
 
         //Abstract methods to calculate Perimeter and areas.
         public abstract decimal CalculatePerimeter();
 
-        public abstract decimal CalculateArea();
+        public abstract decimal  CalculateArea();
 
         public abstract string PrintName();
-
-        
-       
 
 
         //Figure's son class to calculate Square area and perimeter.
@@ -43,18 +45,20 @@ namespace perimetros_areas.models
             {
                 return _Name = "Square";
             }
-            public override decimal CalculateArea()
+            public override decimal  CalculateArea()
             {
-                _Area = Side * Side;
-                return _Area;
+                 _Area = Side * Side;
+                return (Math.Round(_Area,2));
 
             }
 
             public override decimal CalculatePerimeter()
             {
                 _Perimeter = 4 * this.Side;
-                return _Perimeter;
+                return (Math.Round(_Perimeter, 2));
             }
+
+            
         }
 
 
@@ -62,20 +66,20 @@ namespace perimetros_areas.models
         public class Rectangle : Figure
         {
 
-            public override string PrintName()
+            public override string  PrintName()
             {
                 return _Name = "Rectangle";
             }
-            public override decimal CalculateArea()
+            public override decimal  CalculateArea()
             {
                 _Area = Side * Height;
-                return _Area;
+                return (Math.Round(_Area, 2));
             }
 
-            public override decimal CalculatePerimeter()
+            public override decimal  CalculatePerimeter()
             {
                 _Perimeter = (2 * Side) + (2 * Height);
-                return _Perimeter;
+                return (Math.Round(_Perimeter, 2));
             }
 
         }
@@ -89,12 +93,12 @@ namespace perimetros_areas.models
             public override decimal CalculateArea()
             {
                 _Area = (Side * Height) / 2;
-                return _Area;
+                return (Math.Round(_Area, 2));
             }
             public override decimal CalculatePerimeter()
             {
                 _Perimeter = 3 * Side;
-                return _Perimeter;
+                return (Math.Round(_Perimeter, 2));
             }
         }
 
@@ -108,12 +112,12 @@ namespace perimetros_areas.models
             public override decimal CalculateArea()
             {
                 _Area = ((decimal)(Math.PI)) * Radio * Radio;
-                return _Area;
+                return (Math.Round(_Area, 2));
             }
             public override decimal CalculatePerimeter()
             {
                 _Perimeter = ((decimal)(Math.PI)) * 2 * Radio;
-                return _Perimeter;
+                return (Math.Round(_Perimeter, 2));
 
             }
 
@@ -124,59 +128,6 @@ namespace perimetros_areas.models
 
 
     }
-    /*public class Figura
-    {
-        public (decimal, decimal) CasesFigure(String UserInput)
-        {
 
-            switch (UserInput)
-            {
-                case "Square":
-
-                    Figure.Square _Square = new Figure.Square();
-                    Console.WriteLine("Type the length:");
-                    _Square.Side = decimal.Parse(Console.ReadLine());
-                    return (_Square._Area, _Square._Perimeter);
-                    break;
-
-                case "Triangle":
-                    Figure.Triangle _Triangle = new Figure.Triangle();
-                    Console.WriteLine("Type the lenght");
-                    _Triangle.Side = decimal.Parse(Console.ReadLine());
-                    Console.WriteLine("Type the height");
-                    _Triangle.Height = decimal.Parse(Console.ReadLine());
-                    return (_Triangle._Area, _Triangle._Perimeter);
-                    break;
-
-                case "Rectangle":
-                    Figure _Rectangle = new Figure.Rectangle();
-                    Console.WriteLine("Type the lenght: ");
-                    _Rectangle.Side = decimal.Parse(Console.ReadLine());
-                    Console.WriteLine("Type the height");
-                    _Rectangle.Height = decimal.Parse(Console.ReadLine());
-                    return (_Rectangle._Area, _Rectangle._Perimeter);
-                    break;
-
-                case "Circle":
-                    Figure.Circle _Circle = new Figure.Circle();
-                    Console.WriteLine("Type the radio: ");
-                    _Circle.Radio = decimal.Parse(Console.ReadLine());
-                    //Console.WriteLine("Perimeter: " + _Circle.CalculatePerimeter());
-                    //Console.WriteLine("Area: " + _Circle.CalculateArea());
-                    return (_Circle._Area, _Circle._Perimeter);
-                    break;
-
-                default:
-                    Console.WriteLine("Type a correct option and try again!");
-                    return (0, 0);
-                    break;
-
-
-            }
-
-
-        }
-
-    }*/
 }
 
