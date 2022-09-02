@@ -13,10 +13,20 @@ namespace perimetros_areas.models
         public static void StartUserPage() 
         {
 
-            Console.WriteLine("1. To Add & Evaluate a shape , 2. To See your Shape List");
-            int UserInput = int.Parse(Console.ReadLine());
-            MainMenu attend = new MainMenu();
-            attend.UserMenu(UserInput);
+            try
+            {
+                Console.WriteLine("1. To Add & Evaluate a shape , 2. To See your Shape List");
+                int UserInput = int.Parse(Console.ReadLine());
+                MainMenu attend = new MainMenu();
+                attend.UserMenu(UserInput);
+
+            }catch(Exception error)
+            {
+                Console.WriteLine("Error: Invalid input argument");
+                StartUserPage();
+
+            }
+            
         }
     }
 }

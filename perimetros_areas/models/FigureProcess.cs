@@ -8,83 +8,82 @@ using System.Threading.Tasks;
 namespace perimetros_areas.models
 {
 
-   
+    
 
 
     public class FigureProcess
     {
 
-     
+        static Figure?  figureSelected = null;
 
-        public Figure CasesFigure(String UserInput)
+        public Figure CasesFigure(String UserInputSelected)
         {
 
 
-            switch (UserInput)
+            switch (UserInputSelected)
 
             {
                 case "Square":
-                    Figure.Square _Square = new Figure.Square();
+                    figureSelected = new Figure.Square();
                     Console.WriteLine("Type the lenght");
-                    _Square.Side = decimal.Parse(Console.ReadLine());
-                    return _Square;
+                    figureSelected.Side = decimal.Parse(Console.ReadLine());
+                    return figureSelected;
                     break;
 
                 case "Triangle":
-                    Figure.Triangle _Triangle = new Figure.Triangle();
+                    figureSelected  = new Figure.Triangle();
                     Console.WriteLine("Type the lenght");
-                    _Triangle.Side = decimal.Parse(Console.ReadLine());
-                    Console.WriteLine("Type the height");
-                    _Triangle.Height = decimal.Parse(Console.ReadLine());
-                    return _Triangle;
+                    figureSelected.Side = decimal.Parse(Console.ReadLine());
+                    Console.WriteLine("Type the heiht");
+                    figureSelected.Height = decimal.Parse(Console.ReadLine());
+                    return figureSelected;
                     break;
 
                 case "Rectangle":
-                    Figure _Rectangle = new Figure.Rectangle();
+                    figureSelected = new Figure.Rectangle();
                     Console.WriteLine("Type the lenght: ");
-                    _Rectangle.Side = decimal.Parse(Console.ReadLine());
+                    figureSelected.Side = decimal.Parse(Console.ReadLine());
                     Console.WriteLine("Type the height");
-                    _Rectangle.Height = decimal.Parse(Console.ReadLine());
-                    return _Rectangle;
+                    figureSelected.Height = decimal.Parse(Console.ReadLine());
+                    return figureSelected;
                     break;
 
                 case "Circle":
-
-                    Figure.Circle _Circle = new Figure.Circle();
+                    figureSelected = new Figure.Circle();
                     Console.WriteLine("Type the radio: ");
-                    _Circle.Radio = decimal.Parse(Console.ReadLine());
-                    return _Circle;
+                    figureSelected.Radio = decimal.Parse(Console.ReadLine());
+                    return figureSelected;
                     break;
 
                 default:
                     Console.WriteLine("Invalid Option");
-                    //Maostrar nuevamente el menu
-                  
+              
                     return null;
-                  
-                    
                     break;
+             
              }
 
-
-                
-
         }  
-        public static List<Figure> AddElementToList(Figure  figurita)
+        public static List<Figure> AddElementToList()
         { 
-            
-                Figure.ShapeList.Add(figurita);
-                Console.WriteLine("Figuras en lista: " + Figure.ShapeList.Count);
+            //ASK IF FIGURESELECTED IS NOT NULL IS GOING TO ADD SOMETHING TO THE LIST
+             if(figureSelected is not  null){
+                
+                Figure.ShapeList.Add(figureSelected);
+               // Console.WriteLine("Figuras en lista: " + Figure.ShapeList.Count);
                 return Figure.ShapeList;
 
 
+            }
 
-            
+            return Figure.ShapeList;
+
         }
           
-        public static void PrintList(List<Figure> figuras)
+        public static void PrintList()
+
         { 
-            foreach(Figure item in figuras)
+            foreach(Figure item in Figure.ShapeList)
             {
                 Console.WriteLine("Figure type is :  "+item.PrintName()+" its area is: "+ item.CalculateArea() + "and its perimeter is: " + item.CalculatePerimeter());
             }

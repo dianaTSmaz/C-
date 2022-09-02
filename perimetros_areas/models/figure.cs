@@ -14,7 +14,7 @@ namespace perimetros_areas.models
       
         //Attributes
         public decimal  Side { get; set; }
-        public decimal  Height { get; set; }
+        public decimal   Height { get; set; }
 
         protected String  _Name { get; set; }
 
@@ -22,24 +22,24 @@ namespace perimetros_areas.models
 
         public static List<Figure> ShapeList = new List<Figure>();
 
-        //External constructor
+        //External Attributes
         public decimal  _Perimeter { get; set; }
 
-        public decimal  _Area { get; set; }
+        public decimal   _Area { get; set; }
 
        
 
 
         //Abstract methods to calculate Perimeter and areas.
-        public abstract decimal CalculatePerimeter();
+        public abstract  decimal  CalculatePerimeter();
 
-        public abstract decimal  CalculateArea();
+        public abstract decimal   CalculateArea();
 
         public abstract string PrintName();
 
 
         //Figure's son class to calculate Square area and perimeter.
-        public class Square : Figure
+        public class  Square : Figure
         {
             public override string PrintName()
             {
@@ -47,12 +47,12 @@ namespace perimetros_areas.models
             }
             public override decimal  CalculateArea()
             {
-                 _Area = Side * Side;
-                return (Math.Round(_Area,2));
+                  _Area = Side * Side;
+                 return (Math.Round(_Area,2));
 
             }
 
-            public override decimal CalculatePerimeter()
+            public override decimal  CalculatePerimeter()
             {
                 _Perimeter = 4 * this.Side;
                 return (Math.Round(_Perimeter, 2));
@@ -70,7 +70,7 @@ namespace perimetros_areas.models
             {
                 return _Name = "Rectangle";
             }
-            public override decimal  CalculateArea()
+            public override decimal   CalculateArea()
             {
                 _Area = Side * Height;
                 return (Math.Round(_Area, 2));
@@ -90,12 +90,12 @@ namespace perimetros_areas.models
             {
                 return _Name = "Triangle";
             }
-            public override decimal CalculateArea()
+            public override decimal  CalculateArea()
             {
                 _Area = (Side * Height) / 2;
                 return (Math.Round(_Area, 2));
             }
-            public override decimal CalculatePerimeter()
+            public override decimal  CalculatePerimeter()
             {
                 _Perimeter = 3 * Side;
                 return (Math.Round(_Perimeter, 2));
@@ -109,12 +109,12 @@ namespace perimetros_areas.models
             {
                 return _Name = "Circle";
             }
-            public override decimal CalculateArea()
+            public override decimal  CalculateArea()
             {
                 _Area = ((decimal)(Math.PI)) * Radio * Radio;
                 return (Math.Round(_Area, 2));
             }
-            public override decimal CalculatePerimeter()
+            public override decimal  CalculatePerimeter()
             {
                 _Perimeter = ((decimal)(Math.PI)) * 2 * Radio;
                 return (Math.Round(_Perimeter, 2));
